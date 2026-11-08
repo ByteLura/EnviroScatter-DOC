@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compatibility & Technical — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html" class="active">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Compatibility &amp; Technical Details</h1>
+
+    <h2>Supported Unity versions</h2>
+    <ul>
+      <li>Unity 2021.3 LTS (verified)</li>
+      <li>Unity 2022.3 LTS (recommended)</li>
+      <li>Unity 2023.x (verified)</li>
+      <li>Unity 6 (6000.x) and newer (fully supported)</li>
+    </ul>
+
+    <h2>Render pipelines</h2>
+    <ul>
+      <li>Universal Render Pipeline (URP) — all versions</li>
+      <li>High Definition Render Pipeline (HDRP) — all versions</li>
+      <li>Built-in Render Pipeline — Forward and Deferred</li>
+    </ul>
+
+    <h2>Platforms</h2>
+    <ul>
+      <li><strong>Authoring OS:</strong> Windows 10/11, macOS (Intel and Apple Silicon), Linux.</li>
+      <li><strong>Target export platforms:</strong> Standalone PC / Mac / Linux, Android, iOS, PlayStation 5, Xbox Series X/S, Nintendo Switch, WebGL, Meta Quest (VR/AR).</li>
+    </ul>
+
+    <h2>Package architecture</h2>
+    <ul>
+      <li><strong>Editor-only:</strong> all code is isolated inside the <code>ByteLura.EnviroScatter.Editor</code> assembly. No scripts or CPU/memory overhead from this package are included in your exported player builds.</li>
+      <li><strong>Zero external dependencies:</strong> the toolchain is self-contained and requires no third-party plugins.</li>
+      <li><strong>Namespaces:</strong> <code>ByteLura.EnviroScatter.Editor</code>, with <code>.Sampling</code>, <code>.Rules</code> and <code>.Profiles</code> sub-namespaces.</li>
+      <li><strong>Profiles</strong> are ScriptableObject assets — a clean architecture that causes no version-control bloat.</li>
+      <li><strong>API keys</strong> are stored in EditorPrefs on your machine only (see <a href="ai-providers.html">AI Providers &amp; Prompts</a>).</li>
+    </ul>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

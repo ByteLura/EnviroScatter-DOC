@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout Builder — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html" class="active">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Layout Builder</h1>
+    <p class="lede">The AI Modular Layout Builder (<code>Tools &rarr; ByteLura &rarr; AI Modular Layout Builder</code>) is a native 3D layout solver that constructs connected room structures in the editor from a text description.</p>
+
+    <h2>How it works</h2>
+    <ol>
+      <li><strong>Text prompt</strong> — describe your map, for example: <em>"A medieval dungeon with a torture room, an armory, a loot vault, and a dragon boss chamber"</em>.</li>
+      <li><strong>Graph generation</strong> — the active AI provider returns a structured room connection graph: room ids, types (spawn, battle, loot, boss, corridor), dimensions (width, length, height) and connection pathways.</li>
+      <li><strong>Layout solver</strong> — a local C# BFS AABB layout solver calculates non-overlapping 3D coordinates for all rooms so they align and connect accurately.</li>
+      <li><strong>Shell generation</strong> — modular floors, ceilings and walls are instantiated.</li>
+      <li><strong>Doorway carving</strong> — doorways are carved through overlapping walls where rooms connect, with decorative wood or metal doorframes.</li>
+      <li><strong>Accent lighting</strong> — an ambient directional light (theme-colored sun) plus localized point lights inside each room: cyan/blue for Sci-Fi, red/purple for Horror, warm yellow/orange for Medieval and Industrial.</li>
+      <li><strong>Prop scattering</strong> — props from the active profile (or demo assets) are raycast-scattered inside each room according to its type: more clutter in loot rooms, boss props in boss chambers, clear pathways in corridors.</li>
+    </ol>
+
+    <h2>Configuration</h2>
+    <ul>
+      <li><strong>Theme Override</strong> — force a visual style: Sci-Fi, Medieval, Horror or Industrial.</li>
+      <li><strong>Wall Thickness</strong> — 0.1 m to 1.0 m.</li>
+      <li><strong>Doorway Width &amp; Height</strong> — the size of carved openings.</li>
+      <li><strong>Prop Profile</strong> — the Scatter Profile that determines what is scattered inside the rooms.</li>
+      <li><strong>Auto-clean [AI Layout] parent</strong> — when checked, regenerating deletes the previously spawned layout group first.</li>
+    </ul>
+
+    <h2>Level summary</h2>
+    <p>After generation, a summary panel lists the theme, the total rooms placed and per-room statistics. <strong>Clear Generated Layout Objects</strong> removes the spawned elements at any time, and every operation is integrated with Unity's Undo history.</p>
+
+    <div class="note">
+      <p><strong>Connection requirement:</strong> the layout builder queries the AI provider for the room graph, so it requires a cloud provider such as Gemini or OpenAI. It does not run on the Local Offline Parser — see <a href="honest-limits.html">Honest Limits</a>.</p>
+    </div>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

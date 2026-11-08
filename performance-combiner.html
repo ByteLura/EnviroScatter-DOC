@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance & Mesh Combiner — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html" class="active">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Performance &amp; Mesh Combiner</h1>
+    <p class="lede">Thousands of individual GameObjects cost draw calls. Two systems keep scattered scenes fast: the performance budget, which limits how much you scatter, and the static mesh combiner, which merges what you scattered.</p>
+
+    <h2>Performance budget system</h2>
+    <p>Located in the <strong>Performance</strong> tab of the main window. Each tier clamps your profile's scatter parameters to a hardware target:</p>
+    <table>
+      <thead>
+        <tr><th>Platform tier</th><th>Max density</th><th>Min spacing multiplier</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Low-End Mobile</td><td>150</td><td>2.5x</td></tr>
+        <tr><td>Mid Mobile</td><td>400</td><td>1.8x</td></tr>
+        <tr><td>Console — Switch</td><td>800</td><td>1.5x</td></tr>
+        <tr><td>Console — PS5 / Xbox</td><td>2500</td><td>1.1x</td></tr>
+        <tr><td>High-End PC</td><td>5000</td><td>1.0x</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Apply Budget</strong> scales and clamps profile density and spacing so the environment meets the chosen target, and warns you when LODs (Level of Detail) are recommended.</p>
+
+    <h2>Static Mesh Combiner</h2>
+    <p>Open it at <code>Tools &rarr; ByteLura &rarr; Static Mesh Combiner</code>. It merges separate scattered GameObjects that share the same materials into single optimized static meshes, cutting draw calls to a fraction.</p>
+    <h3>How to use</h3>
+    <ol>
+      <li>Assign the target parent object (for example a <code>[Scatter]</code> group) containing the scattered child props.</li>
+      <li>Toggle <strong>Deactivate Original Child Objects</strong> to disable the children while preserving them for future tweaking.</li>
+      <li>Toggle <strong>Generate Combined Mesh Colliders</strong> to create optimized physics colliders.</li>
+      <li>Toggle <strong>Save Combined Mesh as Project Asset</strong> to save meshes as .asset files inside the project, so they load correctly in standalone builds.</li>
+      <li>Select a save folder and click <strong>COMBINE &amp; OPTIMIZE MESHES</strong>.</li>
+    </ol>
+    <h3>Technical details</h3>
+    <ul>
+      <li>Submeshes are grouped by material, with automatic secondary lightmap UV generation for baked global illumination.</li>
+      <li>A 32-bit index buffer (<code>IndexFormat.UInt32</code>) lets meshes with more than 65,535 vertices combine into a single mesh group per material without overflow.</li>
+      <li><strong>Restore Originals</strong> reverts to the editable prefabs at any time, and all changes support Undo.</li>
+    </ul>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

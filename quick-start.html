@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Start — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html" class="active">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Quick Start</h1>
+    <p class="lede">From import to your first scattered environment in five steps. Package path in your project: <code>Assets/ByteLura/EnviroScatter Pro AI</code>.</p>
+
+    <h2>Step 1 — Create the demo scene (recommended)</h2>
+    <ol>
+      <li>Open the Unity menu: <code>Tools &rarr; ByteLura &rarr; Setup Demo Scene</code>.</li>
+      <li>A dialog confirms creation of a pre-populated scene.</li>
+      <li>The demo scene contains a ground plane, scattered items and a floating visual guide, so you can see the full loop running immediately.</li>
+    </ol>
+
+    <h2>Step 2 — Manual setup in your own scene</h2>
+    <ol>
+      <li>Create a terrain or a mesh surface (for example a Plane or another 3D GameObject) in your scene.</li>
+      <li>Make sure the object has a Collider component (TerrainCollider or MeshCollider) — placement raycasts need one.</li>
+      <li>Select the object in the Hierarchy.</li>
+    </ol>
+
+    <h2>Step 3 — Open the main window</h2>
+    <ol>
+      <li>Open <code>Tools &rarr; ByteLura &rarr; EnviroScatter Pro AI</code> and dock the window in your editor layout.</li>
+      <li>Click <strong>Use Selected</strong> next to the Target Surface field, or drag your ground object into the field.</li>
+      <li>Click <strong>Fit Bounds to Selection</strong> to align the green boundary box over the ground.</li>
+    </ol>
+
+    <h2>Step 4 — Create a Scatter Profile</h2>
+    <p>All placement rules (densities, spacing, slope limits) and prefab lists live in a Scatter Profile asset.</p>
+    <ol>
+      <li>In the main window, click <strong>Create New Profile</strong> and save it under your project's Assets folder.</li>
+      <li>If the profile is empty, the editor automatically populates it with procedural tree, rock and grass demo prefabs so you can test immediately.</li>
+    </ol>
+
+    <h2>Step 5 — Generate and apply</h2>
+    <ol>
+      <li>Under the <strong>Scatter</strong> tab, click <strong>Generate Preview</strong>. Green circles mark accepted spots and red crosses mark rejected spots in the SceneView.</li>
+      <li>Adjust the sliders (Density, Min Spacing, Max Slope) and watch the preview update.</li>
+      <li>Click <strong>Apply Placement</strong> to instantiate the prefabs into the Hierarchy.</li>
+      <li>Spawned prefabs are grouped under a <code>[Scatter]</code> parent object and fully support <code>Ctrl+Z</code> undo.</li>
+    </ol>
+    <p>Next: the <a href="scatter-workflow.html">Scatter Workflow</a> page walks through every tab of the main window.</p>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

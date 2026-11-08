@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Placement Tools — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html" class="active">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Placement Tools</h1>
+    <p class="lede">Beyond boundary-based scattering, two interactive tools place assets directly in the SceneView.</p>
+
+    <h2>Scatter Paint Brush</h2>
+    <p>Open it at <code>Tools &rarr; ByteLura &rarr; Scatter Paint Brush</code>. It paints prefabs from your active profile onto any collider in the scene with natural brush strokes.</p>
+    <ul>
+      <li><strong>Activate</strong> — click <strong>ACTIVATE BRUSH</strong>; a circular preview indicator follows your mouse in the SceneView.</li>
+      <li><strong>Paint</strong> — click and drag with the left mouse button on any scene geometry.</li>
+      <li><strong>Erase</strong> — hold <code>Shift</code> while dragging to erase previously painted objects inside the brush radius.</li>
+      <li><strong>Resize</strong> — scroll the mouse wheel while the brush is active to scale the radius.</li>
+      <li><strong>Density &amp; Strength</strong> — sliders set how many objects are painted per stroke and their placement probability.</li>
+      <li><strong>Spacing safeguard</strong> — the brush obeys your profile's spacing constraints, preventing overlapping trees and rocks.</li>
+      <li><strong>Session statistics</strong> — tracks the total objects painted this session; undo or redo strokes, or delete all painted objects at once.</li>
+    </ul>
+
+    <h2>Road / Path Decorator</h2>
+    <p>Open it at <code>Tools &rarr; ByteLura &rarr; Road Path Decorator</code>. It places props — street lights, fences, rocks, flowers — along a spline path defined by waypoints, with continuous tangential alignment.</p>
+    <ul>
+      <li><strong>Waypoints</strong> — click <strong>+ Add Camera Position</strong> to drop a waypoint at your current viewport focal point, or type coordinate vectors manually. Edit or delete individual points in the list; an orange line in the SceneView shows the path.</li>
+      <li><strong>Offsets</strong> — Left and Right Offset values position props alongside the path instead of directly on it.</li>
+      <li><strong>Placement side</strong> — Left, Right, Both or Alternating.</li>
+      <li><strong>Spacing along path</strong> — controls the distance between placed props.</li>
+      <li><strong>Ground snapping</strong> — vertical raycasts at calculated points along the path align props to the surface normal.</li>
+      <li><strong>Clear Decoration</strong> — removes all placed spline decorations in one click.</li>
+      <li><strong>Undo</strong> — the whole placement is a single undo transaction: one <code>Ctrl+Z</code> reverts it completely.</li>
+    </ul>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

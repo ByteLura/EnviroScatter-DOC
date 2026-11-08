@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Providers & Prompts — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html" class="active">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>AI Providers &amp; Prompts</h1>
+    <p class="lede">A multi-provider connection router turns plain-text prompts into calibrated placement profiles. Configure it under <code>Tools &rarr; ByteLura &rarr; AI Settings Manager</code>.</p>
+
+    <h2>Providers</h2>
+    <ul>
+      <li><strong>Local Offline Parser</strong> — free, works instantly using keyword heuristics; no account, no connection.</li>
+      <li><strong>Google Gemini</strong></li>
+      <li><strong>OpenAI</strong> — the GPT-4o model suite.</li>
+      <li><strong>Claude</strong> — Anthropic Claude 3.5 Sonnet.</li>
+      <li><strong>Grok</strong> — xAI API integration.</li>
+      <li><strong>OpenRouter</strong> — unified aggregator API.</li>
+      <li><strong>Ollama</strong> — local open-source models such as Llama 3 and Mistral running on your own PC.</li>
+    </ul>
+    <p>Select your preferred provider in the left panel of the AI Settings Manager.</p>
+
+    <h2>Setting up cloud providers</h2>
+    <ol>
+      <li>Enter your API key in the password-masked field (use the reveal button to verify it).</li>
+      <li>The link icon shortcut opens the provider's developer console, where you obtain a key.</li>
+      <li>Click <strong>Test Connection</strong> — the tool performs a non-blocking test request. A green banner shows latency in milliseconds on success; a red banner shows the exact API error on failure.</li>
+    </ol>
+
+    <h2>Setting up Ollama (fully local)</h2>
+    <ol>
+      <li>Make sure your local Ollama server is running — by default at <code>http://localhost:11434</code>.</li>
+      <li>Enter the base URL endpoint in the settings.</li>
+      <li>Select the desired model, or check <strong>Use Custom Model</strong> to type a model tag manually.</li>
+    </ol>
+    <p>With Ollama, generation runs entirely on your local GPU: no API fees and no project data leaves your machine.</p>
+
+    <h2>Key security</h2>
+    <p>All API keys and credentials are saved locally on your machine using Unity's EditorPrefs. They are never stored in files or scriptable assets and never committed to version control.</p>
+
+    <h2>How prompts become placements</h2>
+    <p>The active provider interprets your description and computes the scatter constraints for the profile — slope thresholds, height limits, normal alignment and density ratios. Requests are processed asynchronously through an event-driven loop hooked into the editor's update cycle, so the Unity editor does not freeze while waiting for a response. The same prompt pipeline drives the <a href="storytelling-feel.html">Storytelling</a> module and the <a href="layout-builder.html">Layout Builder</a>.</p>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

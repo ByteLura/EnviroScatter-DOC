@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting & FAQ — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html" class="active">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Troubleshooting &amp; FAQ</h1>
+
+    <h2>I click "Generate Preview" but nothing is placed or previewed</h2>
+    <p>Usually one of the following:</p>
+    <ol>
+      <li><strong>Selection bounds</strong> — make sure the green bounding box is aligned directly over your target mesh or terrain. Select the object in the Hierarchy and click <strong>Fit Bounds to Selection</strong>.</li>
+      <li><strong>Raycast misses</strong> — the surface must have a Collider component (for example a MeshCollider) so the top-down placement raycasts can find it. The tool automatically adds one to mesh renderers if missing, but check to be sure.</li>
+      <li><strong>Height filters</strong> — if the Height Filter toggle is enabled, verify your minHeight and maxHeight limits contain the surface's Y coordinates.</li>
+      <li><strong>Spacing conflicts</strong> — if Min Spacing is too high relative to your bounds size, new candidates are rejected. Lower Min Spacing.</li>
+      <li><strong>Boundary padding</strong> — padding wider than the selection bounds clamps placement to a zero area. The tool clamps padding to 40% of the bounds size to prevent this.</li>
+    </ol>
+
+    <h2>The editor generated a huge number of light sources while scattering</h2>
+    <p>This was a bug in previous versions, where global components (Directional Lights, Cameras, AudioListeners) could be scattered. The engine now audits the prefabs in your profile: if it detects a Directional Light, Camera or AudioListener inside any assigned prefab, it blocks generation and shows a warning message.</p>
+
+    <h2>The AI settings connection test fails</h2>
+    <ol>
+      <li><strong>Cloud APIs</strong> — make sure you entered a valid API key, that you have internet access, and that your firewall is not blocking connections.</li>
+      <li><strong>Ollama (local)</strong> — make sure your local Ollama application is running (by default on <code>http://localhost:11434</code>). Try opening it in a browser first.</li>
+      <li><strong>Endpoint URL</strong> — aggregators such as OpenRouter, and local proxies, require the correct endpoint URL structure. Refer to the AI Settings Manager for the defaults.</li>
+    </ol>
+
+    <h2>The AI layout generator fails to build rooms</h2>
+    <p>The layout builder requires a cloud connection to query the language model for the room graph. If you are using the Local Offline Parser in settings, switch to a cloud provider such as Gemini or OpenAI. See the <a href="layout-builder.html">Layout Builder</a> page.</p>
+
+    <h2>Still stuck?</h2>
+    <p>Contact support at <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a> — see the <a href="support.html">Support</a> page.</p>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

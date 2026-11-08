@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scatter Workflow — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html" class="active">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Scatter Workflow</h1>
+    <p class="lede">The core workspace is the EnviroScatter Pro AI window (<code>Tools &rarr; ByteLura &rarr; EnviroScatter Pro AI</code>), divided into five workflow tabs.</p>
+
+    <h2>1. Scatter tab — core parameters</h2>
+    <ul>
+      <li><strong>Target Surface &amp; Bounds</strong> — select a mesh or terrain, set padding, and position the boundary box.</li>
+      <li><strong>Prefab List</strong> — assign prefabs to scatter; adjust each prefab's Weight (frequency), random rotation range and scale variation.</li>
+      <li><strong>Alignment &amp; Offsets</strong> — Normal Alignment (0 = upright, 1 = snapped to the surface slope) and Surface Y offset.</li>
+      <li><strong>Filter Toggles</strong> — slope filters, height bounds, spacing rules and collision avoidance, each switched independently.</li>
+    </ul>
+    <p>Generate a preview, tune the parameters against the accepted/rejected markers in the SceneView, then apply. Everything lands under a <code>[Scatter]</code> parent with full undo support.</p>
+
+    <h2>2. AI Prompt tab — text to preset</h2>
+    <ul>
+      <li>Type a prompt such as <em>"A dense, mossy redwood forest floor with boulders"</em>.</li>
+      <li>The window shows visual warning boxes if your profile lacks prefabs.</li>
+      <li><strong>Auto-Apply</strong> (on by default) applies the AI's settings, generates a preview and instantiates the objects in one operation; you can toggle this off to review first.</li>
+      <li>A two-row, eight-button <strong>Quick Launch Bar</strong> in the footer opens every other window (Paint Brush, Variations, Storytelling, style consistency, composition, settings and more) in one click.</li>
+    </ul>
+
+    <h2>3. Biome tab — procedural presets</h2>
+    <ul>
+      <li>Choose from 7 pre-configured biomes: Forest, Desert, Snow/Tundra, Swamp, Ruins, Industrial or Sci-Fi.</li>
+      <li><strong>Apply Biome Preset</strong> loads the preset's default constraints into your profile.</li>
+      <li><strong>Enhance Biome with AI</strong> lets the active AI provider add narrative micro-details (for example campfire debris in ruins) and scatter them automatically.</li>
+    </ul>
+
+    <h2>4. Heatmap tab — placement density</h2>
+    <ul>
+      <li><strong>Bake Heatmap from Current Preview</strong> overlays a 32x32 color-coded grid in the SceneView.</li>
+      <li>Color tiers: Blue (empty), Green (low), Yellow (balanced), Orange (high), Red (hotspot).</li>
+      <li>Diagnostic reports detect dead zones and performance hotspots and render a segmented horizontal distribution bar.</li>
+    </ul>
+
+    <h2>5. Performance tab — budget constraints</h2>
+    <ul>
+      <li>Select one of 5 platform tiers: Low-end Mobile, Mid Mobile, Console (Nintendo Switch), Console (PS5/Xbox) or High-end PC.</li>
+      <li>The tab displays density reduction multipliers, minimum-spacing requirements and LOD suggestions.</li>
+      <li><strong>Apply Performance Budget to Profile</strong> recalculates and clamps your profile's parameters to the tier. Tier values are listed on the <a href="performance-combiner.html">Performance &amp; Mesh Combiner</a> page.</li>
+    </ul>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

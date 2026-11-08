@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analysis Tools — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html" class="active">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Analysis Tools</h1>
+    <p class="lede">Three tools audit the visual quality of a scene: style harmony, composition, and context-aware placement.</p>
+
+    <h2>AI Style Consistency Analyzer</h2>
+    <p>Open it at <code>Tools &rarr; ByteLura &rarr; AI Style Consistency Analyzer</code>. It scans materials, meshes and textures in the current scene to detect style mismatches.</p>
+    <ul>
+      <li><strong>Scene scanning</strong> — calculates the dominant style: Medieval, SciFi, Horror, Realistic, Stylized, Industrial or Fantasy.</li>
+      <li><strong>Profile audit</strong> — scans the active Scatter Profile's prefabs and warns if any assigned asset breaks the visual theme (for example, a Sci-Fi computer terminal in a Medieval dungeon).</li>
+      <li><strong>Style badges</strong> — the detected style is displayed with color-coded badges, warnings and advice.</li>
+    </ul>
+
+    <h2>AI Composition Assistant</h2>
+    <p>Open it at <code>Tools &rarr; ByteLura &rarr; AI Composition Assistant</code>. It analyzes the layout balance and height distribution of placed objects.</p>
+    <ul>
+      <li><strong>Quadrant balance check</strong> — divides the scene bounds into 4 quadrants, counts scattered objects in each, draws a 2x2 grid preview and calculates a 0-100% balance score.</li>
+      <li><strong>Silhouette check</strong> — calculates vertical height variety using Shannon-entropy math and draws a height-distribution bar chart. A low variety score flags that too many objects share the same height.</li>
+      <li><strong>Focal point</strong> — calculates the exact spatial centroid of all scattered items and renders it as a 3D target cross-hair gizmo in the SceneView.</li>
+      <li><strong>Copy Report</strong> — exports the full layout analysis to the clipboard.</li>
+    </ul>
+
+    <h2>Semantic Scatter Filter</h2>
+    <p>Open it at <code>Tools &rarr; ByteLura &rarr; Semantic Scatter Filter</code>. It enables context-aware placement using physics overlap checks.</p>
+    <ul>
+      <li><strong>Tags</strong> — surrounding geometry is classified as NearWall, NearRoad, NearCorner, OpenField, Elevated or NearWater.</li>
+      <li><strong>Scan Scene Origin</strong> — place the SceneView camera anywhere and scan to inspect the local semantic context tags.</li>
+      <li><strong>Saved rules</strong> — semantic filtering conditions are saved to EditorPrefs. When enabled, the core engine automatically filters candidates by these rules (for example, grass only in Open Fields, mushrooms only Near Walls).</li>
+    </ul>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

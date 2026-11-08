@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honest Limits — EnviroScatter Pro AI Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="product-name">EnviroScatter Pro AI</span>
+    <span class="publisher">ByteLura</span>
+  </div>
+</header>
+<div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <div class="sidebar-title">Documentation</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="features.html">Features Overview</a></li>
+          <li><a href="scatter-workflow.html">Scatter Workflow</a></li>
+          <li><a href="ai-providers.html">AI Providers & Prompts</a></li>
+          <li><a href="placement-tools.html">Placement Tools</a></li>
+          <li><a href="layout-builder.html">Layout Builder</a></li>
+          <li><a href="storytelling-feel.html">Storytelling & Handcrafted Feel</a></li>
+          <li><a href="analysis-tools.html">Analysis Tools</a></li>
+          <li><a href="performance-combiner.html">Performance & Mesh Combiner</a></li>
+          <li><a href="technical.html">Compatibility & Technical</a></li>
+          <li><a href="honest-limits.html" class="active">Honest Limits</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting & FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+  <main class="content">
+    <h1>Honest Limits</h1>
+    <p class="lede">What EnviroScatter Pro AI does not do, stated plainly so you can judge the fit before you build on it.</p>
+
+    <h2>Editor-only tool</h2>
+    <p>Every system in this package runs in the Unity Editor. Nothing is included in player builds — which means zero runtime overhead, but also that scattering, AI generation and combining all happen at authoring time. There is no runtime or procedural generation in a shipped game from this package.</p>
+
+    <h2>Cloud AI needs your own account</h2>
+    <p>The cloud providers (Gemini, OpenAI, Claude, Grok, OpenRouter) run on <em>your</em> API keys and your internet connection. Any usage costs charged by those providers are yours. EnviroScatter Pro AI includes no cloud credits.</p>
+
+    <h2>Offline AI is narrower</h2>
+    <ul>
+      <li>The built-in Local Offline Parser works from keyword heuristics. It is instant and free, but it cannot match a real language model's understanding of a complex description.</li>
+      <li>The <strong>Layout Builder requires a cloud provider</strong>: its room-graph generation queries the language model, so it does not run on the Local Offline Parser.</li>
+      <li>Ollama runs real models locally, but generation quality and speed depend on your hardware and the model you choose.</li>
+    </ul>
+
+    <h2>Placement still obeys your scene</h2>
+    <ul>
+      <li>Scattering is raycast-based: target surfaces need colliders, and results depend on your bounds, height filters and spacing settings. Very high minimum spacing inside small bounds will reject most candidates — the tool reports this rather than overriding your rules.</li>
+      <li>Boundary padding is clamped to 40% of the bounds size to prevent zero-area placement.</li>
+      <li>The engine audits assigned prefabs: a prefab containing a Directional Light, Camera or AudioListener is blocked from generation with a warning, rather than scattered by accident.</li>
+    </ul>
+
+    <h2>Performance budgets are clamps, not magic</h2>
+    <p>The five platform tiers cap density and widen spacing to fit a hardware target. They do not optimize your prefabs themselves — heavy meshes and materials still cost what they cost. The mesh combiner reduces draw calls for static props; it is designed for the scattered, static environment, and originals are preserved so you can restore and re-tweak them.</p>
+
+    <h2>Analysis tools advise, they do not decide</h2>
+    <p>The style analyzer, composition assistant and heatmap report what they measure — style tags, balance scores, density tiers. They flag mismatches and hotspots; the artistic call remains yours.</p>
+    <footer class="page-footer">
+      <p>EnviroScatter Pro AI is a ByteLura product. Support: <a href="mailto:bytelura@gmail.com">bytelura@gmail.com</a></p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>
